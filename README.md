@@ -4,7 +4,7 @@
 
 1. Clone the repository
 2. Run `npm install` to install dependencies
-3. Replace the API key in `ArticleListContainer.js`
+3. Replace the API key in `.env`
 4. Run `npm start` to start the development server
 
 ## Testing
