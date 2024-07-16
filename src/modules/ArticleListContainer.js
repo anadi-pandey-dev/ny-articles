@@ -7,9 +7,11 @@ const ArticleListContainer = ({ name }) => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
+  const API_KEY = process.env.REACT_APP_NYT_API_KEY
+
   useEffect(() => {
     axios
-      .get('https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=LlduL0aeoIPjnviwXYNfPEjvrDPOGUNz')
+      .get(`https://api.nytimes.com/svc/mostpopular/v2/viewed/1.json?api-key=${API_KEY}`)
       .then(response => {
         setArticles(response.data.results)
         setLoading(false)
